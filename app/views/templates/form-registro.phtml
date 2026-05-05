@@ -1,0 +1,60 @@
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+      <!-- Tarjeta del Formulario -->
+      <div class="card shadow border-0">
+        <div class="card-header bg-dark text-white text-center py-3">
+          <h3 class="mb-0 fw-bold text-uppercase">Crear Cuenta</h3>
+          <small class="text-warning">Sumate a HinchadasRank</small>
+        </div>
+
+        <div class="card-body p-4">
+          <form action="registrar" method="POST">
+            <!-- Usuario -->
+            <div class="mb-3">
+              <label class="form-label fw-bold">Nombre de usuario</label>
+              <input type="text" name="usuario" class="form-control" placeholder="user123456" required>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label class="form-label fw-bold">Correo Electrónico</label>
+              <input type="email" name="correo" class="form-control" placeholder="nombre@ejemplo.com" required>
+            </div>
+
+            <!-- Password -->
+            <div class="mb-3">
+              <label class="form-label fw-bold">Contraseña</label>
+              <input type="password" name="contraseña" class="form-control" placeholder="Crea una clave segura" required>
+            </div>
+
+            <!-- Select de Equipo -->
+            <div class="mb-4">
+              <label class="form-label fw-bold">¿De qué equipo sos hincha?</label>
+              <select name="equipo" class="form-select">
+                <option value="" selected>Elegí tu club</option>
+                <?php foreach ($equipos as $equipo) { ?>
+                  <option value="<?php echo $equipo->id ?>">
+                    <?php echo $equipo->nombre ?>
+                  </option>
+                <?php } ?>
+              </select>
+            </div>
+
+            <!-- Botón -->
+            <div class="d-grid">
+              <button type="submit" class="btn btn-warning btn-lg fw-bold rounded-pill shadow-sm">
+                Registrarse
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+        <div class="card-footer text-center py-3 bg-light">
+          <span class="text-muted small">¿Ya tenés cuenta? <a href="inicioSesion" class="text-decoration-none fw-bold">Iniciá sesión</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

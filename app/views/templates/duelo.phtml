@@ -1,0 +1,70 @@
+<div class="container text-center mt-5">
+    <h2 class="mb-5 fw-bold text-uppercase italic" style="font-style: italic; color: #1a1a1a;">
+        ¿Quién tiene más aguante?
+    </h2>
+
+    <div class="row justify-content-center align-items-stretch">
+
+        <!-- Equipo 1 -->
+        <div class="col-12 col-md-5 mb-4">
+            <div class="card shadow-lg h-100 border-0 duelo-card" style="background-color: #f8f9fa;">
+                <div class="position-relative overflow-hidden rounded-top">
+                    <img src="<?php echo BASE_URL . "img/" . $equipo1->imagen; ?>"
+                        class="img-fluid w-100"
+                        style="height: 400px; object-fit: cover; transition: transform 0.4s ease;"
+                        alt="<?php echo $equipo1->nombre; ?>">
+
+                    <!-- Escudo Flotante con diseño sobrio -->
+                    <div class="position-absolute top-0 end-0 m-3 shadow rounded-circle bg-white p-2" style="border: 2px solid #ddd;">
+                        <img src="<?php echo BASE_URL . "img/escudos/" . $equipo1->escudo; ?>"
+                            style="width: 55px; height: 55px; object-fit: contain;" alt="Escudo">
+                    </div>
+                </div>
+                <div class="card-footer bg-white border-0 py-4">
+                    <h3 class="mb-4 fw-black text-uppercase" style="letter-spacing: -1px;"><?php echo $equipo1->nombre; ?></h3>
+                    <button data-id="<?php echo $equipo1->id ?>" id="equipo1"
+                        class="btn btn-warning btn-lg w-100 py-3 fw-bold text-uppercase shadow-sm btn-votar">
+                        VOTAR ESTA HINCHADA
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Divisor VS más agresivo -->
+        <div class="col-12 col-md-1 mb-4 d-flex align-items-center justify-content-center">
+            <div class="text-dark d-flex align-items-center justify-content-center">
+                <span class="fw-black display-3" style="font-style: italic; opacity: 0.2;">VS</span>
+            </div>
+        </div>
+
+        <!-- Equipo 2 -->
+        <div class="col-12 col-md-5 mb-4">
+            <div class="card shadow-lg h-100 border-0 duelo-card" style="background-color: #f8f9fa;">
+                <div class="position-relative overflow-hidden rounded-top">
+                    <img src="<?php echo BASE_URL . "img/" . $equipo2->imagen; ?>"
+                        class="img-fluid w-100"
+                        style="height: 400px; object-fit: cover; transition: transform 0.4s ease;"
+                        alt="<?php echo $equipo2->nombre; ?>">
+
+                    <div class="position-absolute top-0 start-0 m-3 shadow rounded-circle bg-white p-2" style="border: 2px solid #ddd;">
+                        <img src="<?php echo BASE_URL . "img/escudos/" . $equipo2->escudo; ?>"
+                            style="width: 55px; height: 55px; object-fit: contain;" alt="Escudo">
+                    </div>
+                </div>
+                <div class="card-footer bg-white border-0 py-4">
+                    <h3 class="mb-4 fw-black text-uppercase" style="letter-spacing: -1px;"><?php echo $equipo2->nombre; ?></h3>
+                    <button data-id="<?php echo $equipo2->id ?>" id="equipo2"
+                        class="btn btn-warning btn-lg w-100 py-3 fw-bold text-uppercase shadow-sm btn-votar">
+                        VOTAR ESTA HINCHADA
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const BASE_URL = "<?php echo BASE_URL; ?>";
+    </script>
+    <script src="<?php echo BASE_URL; ?>js/main.js"></script>
+</div>

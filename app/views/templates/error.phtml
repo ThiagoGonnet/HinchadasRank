@@ -1,0 +1,28 @@
+<main class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 text-center">
+      <div class="card shadow border-0 py-5">
+        <div class="card-body">
+          <!-- Icono de advertencia -->
+          <div class="display-1 text-danger mb-4">
+            <i class="bi bi-exclamation-triangle"></i> ⚠️
+          </div>
+
+          <h1 class="fw-bold text-dark">¡Ups! Algo salió mal</h1>
+
+          <!-- Acá se imprime el mensaje que mandás desde el Controller/Router -->
+          <p class="lead text-muted my-4">
+            <?php echo $msj; ?>
+            <?php echo "Esta página no existe." ?>
+          </p>
+
+          <div class="mt-4">
+            <a href="home" class="btn btn-primary btn-lg rounded-pill px-4 shadow-sm">
+              Volver al Inicio
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

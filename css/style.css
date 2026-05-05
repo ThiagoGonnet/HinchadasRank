@@ -1,0 +1,23 @@
+        .duelo-card {
+          transition: transform 0.2s;
+        }
+
+        .duelo-card:hover {
+          transform: scale(1.02);
+        }
+
+        .btn-warning {
+          background-color: #ffcc00;
+          /* Amarillo "oro" futbolero */
+          border: none;
+          color: #000;
+        }
+
+        .btn-warning:hover {
+          background-color: #e6b800;
+          transform: translateY(-2px);
+        }
+
+        .fw-black {
+          font-weight: 900;
+        }

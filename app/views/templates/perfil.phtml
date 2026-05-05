@@ -1,0 +1,34 @@
+<main class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-sm border-0 rounded-4 overflow-hidden">
+        <div class="card-header bg-dark text-white text-center py-4">
+          <h1 class="h3 mb-0">¡Hola, <span class="text-warning"><?php echo $usuario->usuario; ?></span>!</h1>
+        </div>
+
+        <div class="card-body text-center p-5">
+          <?php if ($equipo): ?>
+            <p class="text-muted mb-2">Hincha oficial de:</p>
+            <h2 class="fw-bold mb-4"><?php echo $equipo->nombre; ?></h2>
+
+            <!-- Imagen controlada con Bootstrap -->
+            <div class="d-flex justify-content-center">
+              <img src="<?php echo BASE_URL . 'img/escudos/' . $equipo->escudo; ?>"
+                alt="Escudo de <?php echo $equipo->nombre; ?>"
+                class="img-fluid shadow-sm p-2 bg-light rounded"
+                style="max-height: 200px; width: auto;">
+            </div>
+          <?php else: ?>
+            <div class="alert alert-warning">
+              No se encontró información de tu equipo.
+            </div>
+          <?php endif; ?>
+
+          <div class="mt-4 d-grid">
+            <a href="duelo" class="btn btn-warning fw-bold rounded-pill">Ir a votar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

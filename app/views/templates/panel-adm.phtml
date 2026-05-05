@@ -1,0 +1,104 @@
+<div class="container my-5">
+  <div class="row">
+    <!-- Columna para Agregar -->
+    <div class="col-md-6 mb-4">
+      <div class="card shadow-sm border-0 rounded-4">
+        <div class="card-header bg-dark text-white p-3">
+          <h2 class="h5 mb-0">🔥 Agregar Nuevo Equipo</h2>
+        </div>
+        <div class="card-body p-4">
+          <form novalidate action="agregarEquipo" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label class="form-label fw-bold">Nombre del equipo</label>
+              <input type="text" name="nombre" class="form-control" placeholder="Ej: Independiente" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold">Escudo (PNG/JPG)</label>
+              <input type="file" name="escudo" class="form-control" accept="image/*" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold">Imagen de la hinchada</label>
+              <input type="file" name="imagen" class="form-control" accept="image/*" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold">Sonido de victoria (MP3)</label>
+              <input type="file" name="sonido" class="form-control" accept="audio/mp3" required>
+            </div>
+
+            <div class="d-grid mt-4">
+              <button type="submit" class="btn btn-warning fw-bold shadow-sm">
+                GUARDAR EQUIPO
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna para Edición y Eliminación -->
+    <div class="col-md-6">
+      <!-- Bloque Editar -->
+      <div class="card shadow-sm border-0 rounded-4 mb-4">
+        <div class="card-header bg-secondary text-white p-3">
+          <h2 class="h5 mb-0">✏️ Editar Equipo</h2>
+        </div>
+        <div class="card-body">
+          <form action="editarEquipo" method="POST">
+
+            <p class="text-muted small">Seleccioná un equipo para modificar sus datos.</p>
+            <select name="equipo">
+              <option value="">Elija un equipo</option>
+              <?php foreach ($equipos as $equipo) { ?>
+                <option value="<?php echo $equipo->id ?>"><?php echo $equipo->nombre ?></option>
+              <?php } ?>
+            </select>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold">Escudo (PNG/JPG)</label>
+              <input type="file" name="escudo" class="form-control" accept="image/*">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold">Imagen de la hinchada</label>
+              <input type="file" name="imagen" class="form-control" accept="image/*">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold">Sonido de victoria (MP3)</label>
+              <input type="file" name="sonido" class="form-control" accept="audio/mp3">
+            </div>
+
+            <button type="submit">Editar</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bloque Eliminar -->
+      <div class="card shadow-sm border-0 rounded-4 border-start border-danger border-4">
+        <div class="card-header bg-white p-3">
+          <h2 class="h5 mb-0 text-danger">⚠️ Eliminar Equipo</h2>
+        </div>
+        <div class="card-body">
+          <form action="eliminarEquipo" method="POST">
+            <p class="text-muted small">Esta acción es irreversible.</p>
+            <select name="equipo">
+              <option value="">Elija un equipo</option>
+              <?php foreach ($equipos as $equipo) { ?>
+                <option value="<?php echo $equipo->id ?>"><?php echo $equipo->nombre ?></option>
+              <?php } ?>
+            </select>
+
+            <button type="submit">Eliminar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<form action="resetearDuelosVotos">
+  <button type="submit">Resetear votos</button>
+</form>
