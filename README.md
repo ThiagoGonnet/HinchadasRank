@@ -50,4 +50,4 @@ git clone https://github.com/TuUsuario/HinchadasRank.git
 
 ## 👤 Desarrollador
 
-Thiago Gonnet - TG Informática y Reparaciones
+Thiago Gonnet
