@@ -33,20 +33,20 @@ HinchadasRank/
 
 1. Clonar proyecto:
 
-git clone https://github.com/TuUsuario/HinchadasRank.git
+--- git clone https://github.com/TuUsuario/HinchadasRank.git
 
 
 2. Servidor:
 
-Alojar en la carpeta raíz de tu servidor local (ej: htdocs).
+- Alojar en la carpeta raíz de tu servidor local (ej: htdocs).
 
-Asegurar que el puerto de MySQL esté configurado correctamente en config.php.
+- Asegurar que el puerto de MySQL esté configurado correctamente en config.php.
 
 3. Base de Datos:
 
-Crear base de datos db_hinchadas.
+- Crear base de datos db_hinchadas.
 
-Importar db/hinchadas.sql.
+- Importar db/hinchadas.sql.
 
 ## 👤 Desarrollador
 
