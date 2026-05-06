@@ -33,7 +33,7 @@ HinchadasRank/
 
 1. Clonar proyecto:
 
---- git clone https://github.com/TuUsuario/HinchadasRank.git
+-- git clone https://github.com/TuUsuario/HinchadasRank.git
 
 
 2. Servidor:
