@@ -1,34 +1,53 @@
 # HinchadasRank ⚽
 
-**HinchadasRank** es una aplicación web interactiva diseñada para determinar cuál es la hinchada más popular mediante un sistema de duelos y votación en tiempo real. Este proyecto fue desarrollado como parte de la formación académica en la **Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas (TUDAI)** de la UNICEN.
+**HinchadasRank** es una plataforma interactiva de entretenimiento diseñada para medir la pasión futbolera. A través de un sistema de duelos dinámicos, los usuarios votan para determinar cuál es la hinchada más grande. Es un proyecto desarrollado de forma independiente, enfocado en la escalabilidad y la experiencia de usuario.
 
-## 🚀 Características
-- **Duelos Aleatorios:** Sistema que selecciona dos equipos al azar para que el usuario vote por su favorito.
-- **Ranking en Tiempo Real:** Visualización dinámica de los equipos ordenados por cantidad de votos.
-- **Gestión de Contenido (CRUD):** Interfaz segura para que el administrador pueda agregar, editar o eliminar equipos.
-- **Autenticación Segura:** Sistema de login para administradores con manejo de sesiones.
-- **Arquitectura MVC:** Código organizado bajo el patrón Modelo-Vista-Controlador.
-- **Votación Ágil:** Implementación de **Fetch API** para procesar los votos sin recargar la página.
+## 🚀 Características principales
+- **Sistema de Duelos Aleatorios:** Algoritmo que empareja equipos de forma dinámica para votación directa.
+- **Ranking Global:** Tabla de posiciones actualizada en tiempo real según el volumen de votos.
+- **Arquitectura Escalable:** Desarrollado bajo el patrón MVC para facilitar la implementación de futuras funcionalidades.
+- **Votación Asíncrona:** Uso de **Fetch API** para una experiencia fluida sin recargas de página.
+- **Panel de Control Pro:** Gestión total de equipos, imágenes y datos desde un backend privado.
 
-## 🛠️ Tecnologías utilizadas
-- **Backend:** PHP (PDO para acceso a datos).
-- **Base de Datos:** MySQL / MariaDB.
-- **Frontend:** HTML5, CSS3 y JavaScript (Fetch API).
-- **Servidor:** XAMPP / Apache.
+## 🛠️ Stack Tecnológico
+- **Backend:** PHP (PDO & MySQL).
+- **Frontend:** JavaScript (ES6+), HTML5, CSS3.
+- **Servidor:** Entorno Apache (XAMPP).
 
-## 📂 Estructura del Proyecto
+## 📂 Estructura del Sistema
 ```text
 HinchadasRank/
 ├── app/
-│   ├── controllers/    # Lógica de control y ruteo
-│   ├── models/         # Consultas a la base de datos (PDO)
-│   └── views/          # Plantillas de visualización (PHTML)
+│   ├── controllers/    # Lógica de negocio y ruteo
+│   ├── models/         # Gestión de datos y persistencia
+│   └── views/          # Interfaz de usuario
 ├── db/
-│   └── hinchadas.sql   # Script de creación de tablas y datos iniciales
-├── img/                # Recursos visuales
-│   ├── escudos/        # Escudos de los clubes
-│   └── fotoshinchadas/ # Fotos de las hinchadas (ej: boca.jpg, river.jpg)
-├── js/                 # Lógica de frontend y manejo de votos
-├── css/                # Estilos del sitio
-├── config.php          # Configuración general y credenciales de BD
-└── router.php          # Manejador de rutas del sistema
+│   └── hinchadas.sql   # Estructura de la base de datos
+├── img/                # Assets visuales (Escudos y Fotos)
+├── js/                 # Motores de votación y efectos
+├── config.php          # Variables de entorno y configuración
+└── router.php          # Gestión de URLs amigables
+```
+
+## 🔧 Setup Local
+
+1. Clonar proyecto:
+
+git clone https://github.com/TuUsuario/HinchadasRank.git
+
+
+2. Servidor:
+
+Alojar en la carpeta raíz de tu servidor local (ej: htdocs).
+
+Asegurar que el puerto de MySQL esté configurado correctamente en config.php.
+
+3. Base de Datos:
+
+Crear base de datos db_hinchadas.
+
+Importar db/hinchadas.sql.
+
+## 👤 Desarrollador
+
+Thiago Gonnet - TG Informática y Reparaciones
