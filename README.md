@@ -1,4 +1,4 @@
-# HinchadasRank ⚽
+<img width="595" height="87" alt="image" src="https://github.com/user-attachments/assets/4d244805-8806-4985-b060-a968cfdee65f" /># HinchadasRank ⚽
 
 **HinchadasRank** es una plataforma interactiva de entretenimiento diseñada para medir la pasión futbolera. A través de un sistema de duelos dinámicos, los usuarios votan para determinar cuál es la hinchada más grande. Es un proyecto desarrollado de forma independiente, enfocado en la escalabilidad y la experiencia de usuario.
 
@@ -33,7 +33,9 @@ HinchadasRank/
 
 1. Clonar proyecto:
 
--- git clone https://github.com/TuUsuario/HinchadasRank.git
+```bash
+git clone https://github.com/TuUsuario/HinchadasRank.git
+```
 
 
 2. Servidor:
